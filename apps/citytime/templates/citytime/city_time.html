@@ -1,0 +1,14 @@
+<h2>Select a City</h2>
+
+<form method="get" action=".">
+    <select name="city">
+        {% for c in cities %}
+            <option value="{{c}}" {% if c == city %}selected{% endif %}>{{c}}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Show The Time</button>
+</form>
+
+<p>Current time in {{city}}: <b>{{time}}</b></p>
+
+<a href="/">Go to Home</a>

@@ -1,0 +1,10 @@
+<h2>User List</h2>
+<ul>
+    {% for user in users %}
+        <li>{{ user.name }} - {{ user.age }} years old</li>
+    {% empty %}
+        <li>No users found.</li>
+    {% endfor %}
+</ul>
+
+<a href="/"> Back to Home</a>
