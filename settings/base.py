@@ -17,6 +17,7 @@ ASGI_APPLICATION = "settings.asgi.application"
 # Apps
 #
 DJANGO_AND_THIRD_PARTY_APPS = [
+    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,8 +25,26 @@ DJANGO_AND_THIRD_PARTY_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-PROJECT_APPS = []
+PROJECT_APPS = [
+    
+    'apps.restaurant',
+    'apps.abstracts',
+]
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
+
+UNFOLD = {
+    'SITE_HEADER': 'Restaurant Admin',
+    'SITE_TITLE': 'Restaurant Admin Portal',
+    'DEFAULT_PAGE_SIZE': 10,
+    'MAX_PAGE_SIZE': 100,
+    'PAGE_SIZE_QUERY_PARAM': 'page_size',
+    'PAGE_QUERY_PARAM': 'page',
+    'ORDERING_PARAM': 'ordering',
+    'SEARCH_PARAM': 'search',
+    'DEFAULT_ORDERING': None,
+    'SEARCH_LOOKUP': 'icontains',
+    'EXCEPTION_WHITELIST': (),
+}
 
 # ----------------------------------------------
 # Middleware | Templates | Validators
