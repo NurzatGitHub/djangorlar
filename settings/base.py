@@ -17,7 +17,7 @@ ASGI_APPLICATION = "settings.asgi.application"
 # Apps
 #
 DJANGO_AND_THIRD_PARTY_APPS = [
-    'unfold',
+    # 'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,8 +29,11 @@ PROJECT_APPS = [
     
     'apps.restaurant',
     'apps.abstracts',
+    'apps.users',
 ]
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 UNFOLD = {
     'SITE_HEADER': 'Restaurant Admin',
