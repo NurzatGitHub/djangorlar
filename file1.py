@@ -9,6 +9,8 @@ class Calculator:
         self.memory = 0
     
     def add(self, a, b):
+        if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
+            raise TypeError("Both operands must be numbers")
         result = a + b
         self.history.append(f"{a} + {b} = {result}")
         self.result = result
