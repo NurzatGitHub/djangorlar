@@ -45,7 +45,7 @@ class DataProcessor:
         return self.processed_data
     
     def calculate_numeric_stats(self, field_name: str) -> Dict[str, float]:
-        """Calculate statistics for numeric field"""
+        """Calculate statistics for numeric field with detailed analysis"""
         values = []
         for item in self.data:
             try:
