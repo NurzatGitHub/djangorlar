@@ -16,8 +16,9 @@ class Calculator:
     
     def subtract(self, a, b):
         result = a - b
-        self.history.append(f"{a} - {b} = {result}")
+        self.history.append(f"SUBTRACTION: {a} - {b} = {result}")
         self.result = result
+        print(f"substracting {b} from {a} gives {result}")
         return result
     
     def multiply(self, a, b):
