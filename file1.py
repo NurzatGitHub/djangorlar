@@ -10,8 +10,9 @@ class Calculator:
     
     def add(self, a, b):
         result = a + b
-        self.history.append(f"{a} + {b} = {result}")
+        self.history.append(f"ADDITION: {a} + {b} = {result}")
         self.result = result
+        print(f"added {a} and {b} to get {result}")
         return result
     
     def subtract(self, a, b):
