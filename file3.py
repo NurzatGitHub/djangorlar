@@ -29,10 +29,10 @@ class FileManager:
         return files
     
     def read_file(self, file_path: str, encoding='utf-8') -> str:
-        """Read file content"""
+        """Read file content with enhanced error handling"""
         full_path = self.base_path / file_path
         if not full_path.exists():
-            raise FileNotFoundError(f"File not found: {file_path}")
+            raise FileNotFoundError(f"File not found: {file_path} in directory {self.base_path}")
         
         try:
             with open(full_path, 'r', encoding=encoding) as file:
