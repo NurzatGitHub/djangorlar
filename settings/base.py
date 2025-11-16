@@ -17,7 +17,6 @@ ASGI_APPLICATION = "settings.asgi.application"
 # Apps
 #
 DJANGO_AND_THIRD_PARTY_APPS = [
-    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,7 +28,11 @@ PROJECT_APPS = [
     
     'apps.restaurant',
     'apps.abstracts',
+    'apps.users',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
 
 UNFOLD = {
