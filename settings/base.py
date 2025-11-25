@@ -29,9 +29,21 @@ PROJECT_APPS = [
     'apps.restaurant',
     'apps.abstracts',
     'apps.users',
+    # 'rest_framework',
+    # 'rest_framework_simplejwt',
+    'apps.education',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer', 
+    )
+}
 
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
 
