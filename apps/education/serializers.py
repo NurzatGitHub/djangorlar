@@ -8,6 +8,7 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = '__all__'
+        read_only_fields = ['owner']
 
     def get_lessons_count(self, obj):
         return obj.lessons.filter(deleted_at__isnull=True).count()
